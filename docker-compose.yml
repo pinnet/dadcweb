@@ -56,11 +56,9 @@ services:
       - mysql-data
     environment:
      - PMA_ARBITRARY=1
-     - PMA_HOSTS=172.26.36.7,172.26.36.8,172.26.36.9,172.26.36.10
-     - PMA_VERBOSES=production-db1,production-db2,dev-db1,dev-db2
      - PMA_USER=root
      - PMA_PASSWORD=secret
-     - PMA_ABSOLUTE_URI=http://dannyarnold.net/phpmyadmin/
+     - PMA_ABSOLUTE_URI=http://dannyarnold.net:8080/phpmyadmin/
     restart: always
     ports:
      - 8080:80
