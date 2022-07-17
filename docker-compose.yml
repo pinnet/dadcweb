@@ -53,12 +53,11 @@ services:
     image: phpmyadmin/phpmyadmin
     container_name: phpmyadmin
     links:
-      - mysql-data
+      - mysql
     environment:
      - PMA_ARBITRARY=1
      - PMA_USER=root
      - PMA_PASSWORD=secret
-     - PMA_ABSOLUTE_URI=http://dannyarnold.net:8080/phpmyadmin/
     restart: always
     ports:
      - 8080:80
