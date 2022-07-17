@@ -29,5 +29,5 @@ services:
     container_name: app-data-container
     volumes:
       - /home/ubuntu/dadcweb/wwwroot:/usr/share/nginx/html/
-  command: "true"
+    command: "true"
       
