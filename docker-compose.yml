@@ -1,22 +1,20 @@
 version: '3'
 
 services:
+  
   nginx:
-    image: nginx:latest
+    build: ./nginx/
     container_name: webserver
     restart: unless-stopped
     ports:
       - 443:8443
     links:
       - php
-    volumes:
-      - /home/ubuntu/dadcweb/nginx.conf:/etc/nginx/nginx.conf
-      - /var/log/nginx:/var/log/nginx/
-      - /home/ubuntu/dadcweb/ssl:/ssl/
-      - /home/ubuntu/dadcweb/wwwroot:/usr/share/nginx/html/
-
+    volumes_from:
+      - app-data
+ 
   php:
-    image: php:7.0-fpm
+    build: ./php/
     container_name: php-container
     expose:
       - 9000
@@ -27,6 +25,26 @@ services:
     image: php:7.0-fpm
     container_name: app-data-container
     volumes:
+      - /home/ubuntu/dadcweb/nginx.conf:/etc/nginx/nginx.conf
+      - /var/log/nginx:/var/log/nginx/
+      - /home/ubuntu/dadcweb/ssl:/ssl/
       - /home/ubuntu/dadcweb/wwwroot:/usr/share/nginx/html/
     command: "true"
-      
+
+  mysql:    
+    image: mysql:5.7  
+    container_name: mysql-container  
+    volumes_from:  
+      - mysql-data  
+    environment:  
+      MYSQL_ROOT_PASSWORD: secret  
+      MYSQL_DATABASE: mydb  
+      MYSQL_USER: myuser  
+      MYSQL_PASSWORD: password  
+
+  mysql-data:    
+    image: mysql:5.7  
+    container_name: mysql-data-container  
+    volumes:  
+      - /var/lib/mysql  
+    command: "true"    
