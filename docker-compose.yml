@@ -56,8 +56,6 @@ services:
       - mysql
     environment:
      - PMA_ARBITRARY=1
-     - PMA_USER=root
-     - PMA_PASSWORD=secret
     restart: always
     ports:
      - 8080:80
