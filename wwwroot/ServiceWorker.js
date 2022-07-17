@@ -1,9 +1,9 @@
 const cacheName = "DefaultCompany-dadcweb-1.0";
 const contentToCache = [
     "Build/unityout.loader.js",
-    "Build/unityout.framework.js.br",
-    "Build/unityout.data.br",
-    "Build/unityout.wasm.br",
+    "Build/unityout.framework.js",
+    "Build/unityout.data",
+    "Build/unityout.wasm",
     "TemplateData/style.css"
 
 ];
