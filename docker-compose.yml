@@ -10,7 +10,6 @@ services:
       - 443:8443
     links:
       - php
-      - phpmyadmin
     volumes_from:
       - app-data
  
@@ -53,6 +52,8 @@ services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: phpmyadmin
+    links:
+      - mysql
     environment:
      - PMA_ARBITRARY=1
     restart: always
