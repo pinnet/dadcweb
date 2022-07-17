@@ -1,4 +1,4 @@
-const cacheName = "DefaultCompany-dadcweb-1.0";
+const cacheName = "dannyarnold.com-dannyarnold.com-1.0";
 const contentToCache = [
     "Build/unityout.loader.js",
     "Build/unityout.framework.js",
