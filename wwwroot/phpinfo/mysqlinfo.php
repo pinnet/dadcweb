@@ -8,8 +8,8 @@
       <p><?php echo 'We are running PHP, version: ' . phpversion(); ?></p>  
       <?  
        $database ="mydb";  
-       $user = "myuser";  
-       $password = "password";  
+       $user = "root";  
+       $password = "secret";  
        $host = "mysql";  
 
        $connection = new PDO("mysql:host={$host};dbname={$database};charset=utf8", $user, $password);  
