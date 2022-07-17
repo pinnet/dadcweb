@@ -10,6 +10,7 @@ services:
       - 443:8443
     links:
       - php
+      - phpmyadmin
     volumes_from:
       - app-data
  
@@ -47,4 +48,17 @@ services:
     container_name: mysql-data-container  
     volumes:  
       - /var/lib/mysql  
-    command: "true"    
+    command: "true" 
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    environment:
+     - PMA_ARBITRARY=1
+    restart: always
+    ports:
+     - 8080:80
+    volumes:
+     - /sessions
+     - ~/docker/phpmyadmin/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php
+     - /custom/phpmyadmin/theme/:/www/themes/theme/   
