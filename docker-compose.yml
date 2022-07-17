@@ -20,6 +20,14 @@ services:
     container_name: php-container
     expose:
       - 9000
+
+  volumes_from:
+    - app-data
+
+  app-data:
+    image: php:7.0-fpm
+    container_name: app-data-container
     volumes:
       - /home/ubuntu/dadcweb/wwwroot:/usr/share/nginx/html/
+  command: "true"
       
