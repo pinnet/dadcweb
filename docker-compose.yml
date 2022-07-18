@@ -34,9 +34,7 @@ services:
   mysql:    
     image: mysql:5.7  
     container_name: mysql-container
-    hostname: mysqldb
-    expose:
-      - 3306  
+    hostname: mysqldb 
     volumes_from:  
       - mysql-data  
     environment:  
