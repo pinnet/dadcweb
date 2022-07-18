@@ -1,9 +1,9 @@
-<PHP 
+<?PHP 
 
 phpinfo();  
 
 
->
+?>
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
