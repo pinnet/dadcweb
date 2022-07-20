@@ -1,4 +1,3 @@
 <?php
-$output = shell_exec('touch /tmp/stalerepo');
-echo "<pre>$output</pre>";
+error_log("wwwroot stale",0);
 ?>
