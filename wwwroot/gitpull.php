@@ -1,4 +1,4 @@
 <?php
-$output = shell_exec('sudo cd /root/dadc : sudo git pull');
+$output = shell_exec('ls -l');
 echo "<pre>$output</pre>";
 ?>
