@@ -1,19 +1,29 @@
 <!DOCTYPE html>
-<HTML>
-<HEAD>
-<TITLE>WebAMP</TITLE>
-<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<META name="viewport" content="width=device-width, initial-scale=1.0">
-<META name="description" content="WebAMP is a web based audio player.">
-<link rel="stylesheet" href="css/style.css">
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
 <body>
-<div id="app"></div>
-<script src="https://unpkg.com/webamp"></script>
-<script>
-    const app = document.getElementById("app")
-    const webamp = new Webamp();
-    webamp.renderWhenReady(app);
-</script>
-</body>
-</HTML>
-<!-- Path: wwwroot\webamp\index.php -->
+    <div id="app" style="height: 100vh">
+        <!-- Webamp will attempt to center itself within this div -->
+    </div>
+    <script src="https://unpkg.com/webamp@1.4.2/built/webamp.bundle.min.js"></script>
+    <script>
+        const Webamp = window.Webamp;
+        const webamp = new Webamp({
+            initialTracks: [
+                {
+                    metaData: {
+                        artist: "Groove Salad - Somafm",
+                        title: "Grove Salad - Somafm",
+                    },
+                    // NOTE: Your audio file must be served from the same domain as your HTML
+                    // file, or served with permissive CORS HTTP headers:
+                    // https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+                    url: "http://ice2.somafm.com/groovesalad-128-mp3",
+                    duration: 5.322286
+                }
+            ],
+       
