@@ -26,4 +26,13 @@
                     duration: 5.322286
                 }
             ],
+        });
+
+// Returns a promise indicating when it's done loading.
+webamp.renderWhenReady(document.getElementById('app'));
+</script>
+</body>
+
+</html>
+
        
