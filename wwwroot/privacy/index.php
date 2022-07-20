@@ -1,5 +1,5 @@
 <?PHP 
-require_once "phplib/nocache.php";
+require_once "phpinfo.php";
 session_start();
 $myfile = fopen("index.html", "r") or die("Unable to open file!");
 echo fread($myfile,filesize("index.html"));
