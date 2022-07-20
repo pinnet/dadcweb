@@ -17,7 +17,7 @@ git commit -m %arg%
 git push
 echo Build complete.
 :topush
-   echo push to git ?
+   echo pull on webserver ?
    set /p answer=Commit build to repo Y/N?
    if /i "%answer:~,1%" EQU "Y" goto push
    if /i "%answer:~,1%" EQU "N" exit /b
