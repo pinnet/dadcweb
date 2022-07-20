@@ -25,6 +25,6 @@ echo Build complete.
    goto topush
 :push
    curl https://dannyarnold.net/gitpull.php
-   echo done.
+   echo  - done.
 set /p= "Press Enter to continue..."
 exit /b
