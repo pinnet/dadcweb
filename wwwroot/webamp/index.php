@@ -6,10 +6,8 @@
     <link rel="stylesheet" href="css/style.css" />  
 </head>
 
-<body>
-    <div id="app">
-        <!-- Webamp will attempt to center itself within this div -->
-    </div>
+<body  onClick="webamp.play()">
+    <div id="app"></div>
     <script src="https://unpkg.com/webamp@1.4.2/built/webamp.bundle.min.js"></script>
     <script>
         const Webamp = window.Webamp;
