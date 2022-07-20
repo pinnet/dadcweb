@@ -16,4 +16,5 @@ git add .
 git commit -m %arg%
 git push
 echo Build complete.
-set /p= "Press Enter to continue..." 
+set /p= "Press Enter to continue..."
+exit /b
