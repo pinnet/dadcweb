@@ -30,7 +30,8 @@
         });
 
 // Returns a promise indicating when it's done loading.
-webamp.renderWhenReady(document.getElementById('app'));
+webamp.renderWhenReady(document.getElementById('app')).then(() => { webamp.play(); });
+    </script>
 </script>
 </body>
 
