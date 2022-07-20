@@ -16,6 +16,7 @@ services:
   php:
     build: ./php/
     container_name: php-container
+    restart: unless-stopped
     expose:
       - 9000
     volumes_from:
