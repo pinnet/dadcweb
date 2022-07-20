@@ -12,9 +12,8 @@ cd %gitpath%
    echo Please type Y for Yes or N for No
    goto again
 :commit
-@echo on
 git add .
 git commit -m %arg%
 git push
-@echo off
+echo Build complete.
 set /p= "Press Enter to continue..." 
