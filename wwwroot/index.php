@@ -1,18 +1,12 @@
-<?PHP 
-
-header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
-header("Cache-Control: post-check=0, pre-check=0", false);
-header("Pragma: no-cache");
-session_start();
-
-
-?> 
+<?PHP session_start();
+require_once "webroot/nocache.php";
+?>
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Welcome to <?PHP echo session_id(); ?> dannyarnold.com</title>
+    <title>Welcome to dannyarnold.com</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <link rel="manifest" href="manifest.webmanifest">
