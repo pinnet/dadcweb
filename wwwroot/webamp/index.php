@@ -31,6 +31,7 @@
 webamp.renderWhenReady(document.getElementById('app')).then(() => { webamp.play(); });
     </script>
 </script>
+<button class="playbutton" onClick="webamp.play()">Play</button>
 </body>
 
 </html>
