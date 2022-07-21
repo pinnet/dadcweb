@@ -10,12 +10,11 @@
     <div id="app"></div>
     <marquee id="current-track"></marquee>
     <div id="controls">
-      <button id="prev">Previous</button>
-      <button id="play">Play</button>
-      <button id="pause">Pause</button>
-      <button id="stop">Stop</button>
-      <button id="next">Next</button>
-      <button id="close">Close</button>
+      <button id="<">Previous</button>
+      <button id=">">Play</button>
+      <button id="||">Pause</button>
+      <button id="O">Stop</button>
+      <button id=">">Next</button>
     </div>
 
 
