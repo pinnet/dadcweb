@@ -1,3 +1,4 @@
+<?php require_once "webroot/nocache.php"; ?>
 <!DOCTYPE html>
 <html>
 
@@ -38,8 +39,9 @@
         });
 
 // Returns a promise indicating when it's done loading.
-webamp.renderWhenReady(document.getElementById('app')).then(() => { webamp.play(); });
+webamp.renderWhenReady(document.getElementById('app'));
     </script>
+    <script src="index.js"></script>
 </script>
 </body>
 </html>
