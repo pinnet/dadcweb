@@ -8,6 +8,17 @@
 
 <body  onClick="webamp.play()">
     <div id="app"></div>
+    <marquee id="current-track"></marquee>
+    <div id="controls">
+      <button id="prev">Previous</button>
+      <button id="play">Play</button>
+      <button id="pause">Pause</button>
+      <button id="stop">Stop</button>
+      <button id="next">Next</button>
+      <button id="close">Close</button>
+    </div>
+
+
     <script src="https://unpkg.com/webamp@1.4.2/built/webamp.bundle.min.js"></script>
     <script>
         const Webamp = window.Webamp;
@@ -31,9 +42,7 @@
 webamp.renderWhenReady(document.getElementById('app')).then(() => { webamp.play(); });
     </script>
 </script>
-<button class="playbutton" onClick="webamp.play()">Play</button>
 </body>
-
 </html>
 
        

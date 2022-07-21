@@ -4,3 +4,21 @@ body {
     padding: 0;    
     margin: 0;
 }
+#app {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+  }
+#controls {
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    bottom: 10px;
+  }
+  #current-track {
+    text-align: center;
+    background-color: rgb(85, 24, 24);
+    color: white;
+    padding: 10px 0;
+  }
+  
