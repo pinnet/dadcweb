@@ -10,11 +10,4 @@ const buttonBindings = [
     document.getElementById(id).addEventListener("click", cb);
   });
   
-  // An example of shoing the currently playing track
-  webamp.onTrackDidChange((trackInfo) => {
-    const { artist, title } = trackInfo.metaData;
-    // Another option might be to set `document.title`;
-    document.getElementById(
-      "current-track"
-    ).innerText = `Now playing: ${title} by ${artist}`;
-  });
+  

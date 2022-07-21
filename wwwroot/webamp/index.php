@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="css/style.css" />  
 </head>
 
-<body  onClick="webamp.play()">
+<body>
     <div id="app"></div>
-    <marquee id="current-track"></marquee>
     <div id="controls">
       <button id="prev">Previous</button>
       <button id="play">Play</button>
@@ -17,8 +16,6 @@
       <button id="stop">Stop</button>
       <button id="next">Next</button>
     </div>
-
-
     <script src="https://unpkg.com/webamp@1.4.2/built/webamp.bundle.min.js"></script>
     <script>
         const Webamp = window.Webamp;
@@ -38,11 +35,20 @@
             ],
         });
 
-// Returns a promise indicating when it's done loading.
-webamp.renderWhenReady(document.getElementById('app'));
+        const buttonBindings = [
+            { id: "prev", cb: () => webamp.previousTrack() },
+            { id: "play", cb: () => webamp.play() },
+            { id: "pause", cb: () => webamp.pause() },
+            { id: "stop", cb: () => webamp.stop() },
+            { id: "next", cb: () => webamp.nextTrack() },
+            { id: "close", cb: () => webamp.close() }
+        ];
+        buttonBindings.forEach(({ id, cb }) => {
+        document.getElementById(id).addEventListener("click", cb);
+        });
+
+        webamp.renderWhenReady(document.getElementById('app'));
     </script>
-    <script src="index.js"></script>
-</script>
 </body>
 </html>
 
