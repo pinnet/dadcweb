@@ -15,4 +15,3 @@ require_once "webroot/nocache.php";
         <script type="text/javascript" src="js/x64.js"></script>
     </body>
 </html>
-###auto-r
