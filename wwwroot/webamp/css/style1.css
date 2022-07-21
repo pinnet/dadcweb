@@ -4,10 +4,12 @@ body {
     padding: 0;    
     margin: 0;
 }
-#app {
+#canvas {
     position: absolute;
     margin: 0;
     padding: 0;
+    height: 100vh;
+    width: 100%;
   }
 #controls {
     position: fixed;
