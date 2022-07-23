@@ -25,7 +25,7 @@ body { padding: 0; margin: 0; overflow-x: hidden; }
     position: relative;
     top: 10%; /* 25% from the top */
     width: 100%; /* 100% width */
-    height:70%;
+    height:80%;
     overflow: hidden; 
     text-align: center; /* Centered text/links */
 }
