@@ -11,7 +11,14 @@ require_once "webroot/nocache.php";
     <link rel="stylesheet" href="TemplateData/style.css">
     <link rel="manifest" href="manifest.webmanifest">
   </head>
-  <body>
+  <body >
+    <div id="gprd" class="overlay">
+      <div class="overlay-content">
+        <a href="javascript:openTerms();">Website Cookie Policy</a> 
+        <div id="terms" class="terms-content" ></div>
+        <a href="javascript:closeNav();">I agree</a>
+      </div>
+    </div>
     <div id="unity-container">
       <canvas id="unity-canvas" width=960 height=600></canvas>
       <div id="unity-loading-bar">
@@ -23,6 +30,23 @@ require_once "webroot/nocache.php";
       <div id="unity-warning"> </div>
     </div>
     <script>
+      function previewUrl(url,target){
+            var div = document.getElementById(target);
+            div.innerHTML = '<iframe style="width:100%;height:100%;" frameborder="0" src="' + url + '" />';      
+      }
+      function openTerms(){
+          document.getElementById("gprd").style.height = "100%";
+          document.getElementById("terms").style.height = "100%";
+          previewUrl("/terms","terms");
+      }
+      function openNav(){
+          document.getElementById("gprd").style.width = "100%";
+      }
+      function closeNav() {
+          document.getElementById("gprd").style.height = "";
+          document.getElementById("terms").innerHTML = "";
+          document.getElementById("gprd").style.width = "0%";
+      }
       window.addEventListener("load", function () {
         if ("serviceWorker" in navigator) {
           navigator.serviceWorker.register("ServiceWorker.js");
@@ -35,6 +59,8 @@ require_once "webroot/nocache.php";
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var warningBanner = document.querySelector("#unity-warning");
 
+
+      // src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous">
       // Shows a temporary message banner/ribbon for a few seconds, or
       // a permanent error message on top of the canvas if type=='error'.
       // If type=='warning', a yellow highlight color is used.
@@ -96,6 +122,7 @@ require_once "webroot/nocache.php";
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
           loadingBar.style.display = "none";
+          openNav();
         }).catch((message) => {
           alert(message);
         });

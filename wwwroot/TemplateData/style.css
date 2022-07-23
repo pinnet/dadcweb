@@ -1,4 +1,4 @@
-body { padding: 0; margin: 0 }
+body { padding: 0; margin: 0; overflow-x: hidden; }
 #unity-container { position: absolute; width: 100%; height: 100%; }
 #unity-canvas { width: 100%; height: 100%; background: #000000 }
 #unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
@@ -6,3 +6,48 @@ body { padding: 0; margin: 0 }
 #unity-progress-bar-empty { width: 141px; height: 18px; margin-top: 10px; background: url('progress-bar-empty-dark.png') no-repeat center }
 #unity-progress-bar-full { width: 0%; height: 18px; margin-top: 10px; background: url('progress-bar-full-dark.png') no-repeat center }
 #unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 20%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0,0.5); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s;
+  }
+  /* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    height:50%;
+    overflow-x: hidden; 
+    text-align: center; /* Centered text/links */
+}
+
+.terms-content {
+    position: relative;
+    width: 50%; /* 100% width */
+    left:25%;
+    background-color: rgb(255, 255, 255);
+    text-align: center; /* Centered text/links */
+}
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #91ff00e5;
+  }
