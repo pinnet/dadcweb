@@ -1,8 +1,8 @@
-var GPRD_COOKIE_LENGTH = 180;
+var GDPR_COOKIE_LENGTH = 180;
 
-function checkGPRD(){
-    if(getCookie("GPRD") == ""){
-    openGPRD();
+function checkGDPR(){
+    if(getCookie("GDPR") == ""){
+    openGDPR();
     }
 }
 function setCookie(name, value, days) {
@@ -36,18 +36,18 @@ function previewUrl(url,target){
     div.innerHTML = '<iframe style="width:100%;height:100%;" frameborder="0" src="' + url + '" />';      
 }
 function openTerms(){
-    document.getElementById("gprd").style.height = "100%";
+    document.getElementById("gdpr").style.height = "100%";
     document.getElementById("terms").style.height = "80%";
     previewUrl("/terms","terms");
 }
-function openGPRD(){
-    document.getElementById("gprd").style.width = "100%";
+function openGDPR(){
+    document.getElementById("gdpr").style.width = "100%";
 }
-function agreeGPRD() {
-    setCookie("GPRD","true",GPRD_COOKIE_LENGTH);
-    closeGPRD();
+function agreeGDPR() {
+    setCookie("GDPR","true",GDPR_COOKIE_LENGTH);
+    closeGDPR();
 }
-function closeGPRD() {
-    document.getElementById("gprd").innerHTML = "";
-    document.getElementById("gprd").style.width = "0%";
+function closeGDPR() {
+    document.getElementById("gdpr").innerHTML = "";
+    document.getElementById("gdpr").style.width = "0%";
 }

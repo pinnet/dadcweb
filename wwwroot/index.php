@@ -11,14 +11,14 @@ require_once "webroot/nocache.php";
     <link rel="stylesheet" href="TemplateData/style.css">
     <link rel="manifest" href="manifest.webmanifest">
   </head>
-  <script src="gprd.js"></script>
+  <script src="gdpr.js"></script>
   <body onload="document.documentElement.style.overflow = 'hidden';">
-    <div id="gprd" class="overlay">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeGPRD()">&times;</a>
+    <div id="gdpr" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeGDPR()">&times;</a>
       <div class="overlay-content">
         <a href="javascript:openTerms();">Website Cookie Policy</a> 
         <div id="terms" class="terms-content" ></div>
-        <a href="javascript:agreeGPRD();">I agree</a>
+        <a href="javascript:agreeGDPR();">I agree</a>
       </div>
     </div>
     <div id="unity-container">
@@ -107,7 +107,7 @@ require_once "webroot/nocache.php";
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
           loadingBar.style.display = "none";
-          checkGPRD();
+          checkGDPR();
         }).catch((message) => {
           alert(message);
         });
