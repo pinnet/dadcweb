@@ -14,10 +14,11 @@ require_once "webroot/nocache.php";
   <script src="gprd.js"></script>
   <body onload="document.documentElement.style.overflow = 'hidden';">
     <div id="gprd" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeGPRD()">&times;</a>
       <div class="overlay-content">
         <a href="javascript:openTerms();">Website Cookie Policy</a> 
         <div id="terms" class="terms-content" ></div>
-        <a href="javascript:closeGPRD();">I agree</a>
+        <a href="javascript:agreeGPRD();">I agree</a>
       </div>
     </div>
     <div id="unity-container">

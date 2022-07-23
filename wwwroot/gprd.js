@@ -43,8 +43,11 @@ function openTerms(){
 function openGPRD(){
     document.getElementById("gprd").style.width = "100%";
 }
-function closeGPRD() {
+function agreeGPRD() {
     setCookie("GPRD","true",GPRD_COOKIE_LENGTH);
+    closeGPRD();
+}
+function closeGPRD() {
     document.getElementById("gprd").innerHTML = "";
     document.getElementById("gprd").style.width = "0%";
 }
