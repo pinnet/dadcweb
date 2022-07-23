@@ -11,7 +11,7 @@ require_once "webroot/nocache.php";
     <link rel="stylesheet" href="TemplateData/style.css">
     <link rel="manifest" href="manifest.webmanifest">
   </head>
-  <body >
+  <body onload="document.documentElement.style.overflow = 'hidden';">
     <div id="gprd" class="overlay">
       <div class="overlay-content">
         <a href="javascript:openTerms();">Website Cookie Policy</a> 
@@ -36,15 +36,14 @@ require_once "webroot/nocache.php";
       }
       function openTerms(){
           document.getElementById("gprd").style.height = "100%";
-          document.getElementById("terms").style.height = "100%";
+          document.getElementById("terms").style.height = "80%";
           previewUrl("/terms","terms");
       }
       function openNav(){
           document.getElementById("gprd").style.width = "100%";
       }
       function closeNav() {
-          document.getElementById("gprd").style.height = "";
-          document.getElementById("terms").innerHTML = "";
+          document.getElementById("gprd").innerHTML = "";
           document.getElementById("gprd").style.width = "0%";
       }
       window.addEventListener("load", function () {

@@ -8,7 +8,7 @@ body { padding: 0; margin: 0; overflow-x: hidden; }
 #unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
 .overlay {
     /* Height & width depends on how you want to reveal the overlay (see JS below) */   
-    height: 20%;
+    height: 15%;
     width: 0;
     position: fixed; /* Stay in place */
     z-index: 9999; /* Sit on top */
@@ -22,10 +22,10 @@ body { padding: 0; margin: 0; overflow-x: hidden; }
   /* Position the content inside the overlay */
 .overlay-content {
     position: relative;
-    top: 25%; /* 25% from the top */
+    top: 10%; /* 25% from the top */
     width: 100%; /* 100% width */
     height:60%;
-    overflow-x: hidden; 
+    overflow: hidden; 
     text-align: center; /* Centered text/links */
 }
 
