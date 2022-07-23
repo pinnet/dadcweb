@@ -11,12 +11,13 @@ require_once "webroot/nocache.php";
     <link rel="stylesheet" href="TemplateData/style.css">
     <link rel="manifest" href="manifest.webmanifest">
   </head>
+  <script src="gprd.js"></script>
   <body onload="document.documentElement.style.overflow = 'hidden';">
     <div id="gprd" class="overlay">
       <div class="overlay-content">
         <a href="javascript:openTerms();">Website Cookie Policy</a> 
         <div id="terms" class="terms-content" ></div>
-        <a href="javascript:closeNav();">I agree</a>
+        <a href="javascript:closeGPRD();">I agree</a>
       </div>
     </div>
     <div id="unity-container">
@@ -30,22 +31,6 @@ require_once "webroot/nocache.php";
       <div id="unity-warning"> </div>
     </div>
     <script>
-      function previewUrl(url,target){
-            var div = document.getElementById(target);
-            div.innerHTML = '<iframe style="width:100%;height:100%;" frameborder="0" src="' + url + '" />';      
-      }
-      function openTerms(){
-          document.getElementById("gprd").style.height = "100%";
-          document.getElementById("terms").style.height = "80%";
-          previewUrl("/terms","terms");
-      }
-      function openNav(){
-          document.getElementById("gprd").style.width = "100%";
-      }
-      function closeNav() {
-          document.getElementById("gprd").innerHTML = "";
-          document.getElementById("gprd").style.width = "0%";
-      }
       window.addEventListener("load", function () {
         if ("serviceWorker" in navigator) {
           navigator.serviceWorker.register("ServiceWorker.js");
@@ -121,7 +106,7 @@ require_once "webroot/nocache.php";
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
           loadingBar.style.display = "none";
-          openNav();
+          checkGPRD();
         }).catch((message) => {
           alert(message);
         });
