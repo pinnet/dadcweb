@@ -4,6 +4,7 @@
     <type fullname="DisplayLogger" preserve="all" />
     <type fullname="Loader" preserve="all" />
     <type fullname="PleaseWaitProgress" preserve="all" />
+    <type fullname="WebGLinterop" preserve="all" />
   </assembly>
   <assembly fullname="Unity.Addressables, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" preserve="all">
     <type fullname="UnityEngine.AddressableAssets.Addressables" preserve="all" />
