@@ -36,13 +36,15 @@ function previewUrl(url,target){
     div.innerHTML = '<iframe style="width:100%;height:100%;" frameborder="0" src="' + url + '" />';      
 }
 function openTerms(){
+    resetContent();
     document.getElementById("gdpr").style.height = "100%";
     document.getElementById("terms").style.height = "80%";
     previewUrl("/terms","terms");
     document.getElementById("gdpr-content").innerHTML += '<a href="javascript:agreeGDPR();">I agree</a>';
 }
 function openGDPR(){
-    document.getElementById("gdpr").style.width = "100%";   
+    document.getElementById("gdpr").style.width = "100%";
+    resetContent();
 }
 function agreeGDPR() {
     setCookie("GDPR","true",GDPR_COOKIE_LENGTH);
@@ -51,4 +53,8 @@ function agreeGDPR() {
 function closeGDPR() {
     document.getElementById("gdpr").innerHTML = "";
     document.getElementById("gdpr").style.width = "0%";
+}
+function resetContent(){
+    document.getElementById("gdpr-content").innerHTML="";
+    document.getElementById("gdpr-content").innerHTML='<a href="javascript:openTerms();">Website Cookie Policy</a><div id="terms" class="terms-content" ></div>';
 }

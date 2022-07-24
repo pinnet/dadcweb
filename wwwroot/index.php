@@ -15,11 +15,7 @@ require_once "webroot/nocache.php";
   <body onload="document.documentElement.style.overflow = 'hidden';">
     <div id="gdpr" class="overlay">
       <a href="javascript:void(0)" class="closebtn" onclick="closeGDPR()">&times;</a>
-      <div id="gdpr-content" class="overlay-content">
-        <a href="javascript:openTerms();">Website Cookie Policy</a> 
-        <div id="terms" class="terms-content" ></div>
-        
-      </div>
+      <div id="gdpr-content" class="overlay-content"></div>
     </div>
     <div id="unity-container">
       <canvas id="unity-canvas" width=960 height=600></canvas>
