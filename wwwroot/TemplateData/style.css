@@ -7,23 +7,21 @@ body { padding: 0; margin: 0; overflow-x: hidden; }
 #unity-progress-bar-full { width: 0%; height: 18px; margin-top: 10px; background: url('progress-bar-full-dark.png') no-repeat center }
 #unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
 .overlay {
-    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
-    height: 15%;
-    min-height: 140px;
+    min-height: 100px;
     width: 0;
     position: fixed; /* Stay in place */
     z-index: 9999; /* Sit on top */
     left: 0;
     top: 0;
     background-color: rgb(0,0,0); /* Black fallback color */
-    background-color: rgba(0,0,0,0.5); /* Black w/opacity */
+    background-color: rgba(0,0,0,0.8); /* Black w/opacity */
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 0.5s;
   }
   /* Position the content inside the overlay */
 .overlay-content {
     position: relative;
-    top: 10%; /* 25% from the top */
+    top: 8%; /* 25% from the top */
     width: 100%; /* 100% width */
     height:80%;
     overflow: hidden; 
