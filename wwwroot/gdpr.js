@@ -38,7 +38,7 @@ function previewUrl(url,target){
 function openTerms(){
     resetContent();
     document.getElementById("gdpr").style.height = "100%";
-    document.getElementById("terms").style.height = "80%";
+    document.getElementById("terms").style.height = "75%";
     previewUrl("/terms","terms");
     document.getElementById("gdpr-content").innerHTML += '<a href="javascript:agreeGDPR();">I agree</a>';
 }
